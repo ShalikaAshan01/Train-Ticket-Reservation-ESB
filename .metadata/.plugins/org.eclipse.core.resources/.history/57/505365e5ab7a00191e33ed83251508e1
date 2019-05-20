@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="checkAvailability" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="get" uri-template="http://localhost:3000/trains/check/availability">
+        <timeout>
+            <duration>120000</duration>
+        </timeout>
+    </http>
+</endpoint>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/api" name="api" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/users/signin">
+        <inSequence>
+            <log/>
+            <send>
+                <endpoint key="signin_endpoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

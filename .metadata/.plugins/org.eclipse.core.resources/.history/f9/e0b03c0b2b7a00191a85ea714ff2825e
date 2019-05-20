@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/trainApp" name="BookMyTrain" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/trains/all">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting data"/>
+            </log>
+            <send>
+                <endpoint key="Get_Trains"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Response Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/user/login/{email}/{password}">
+        <inSequence>
+            <log description="Requesting Log" level="custom">
+                <property name="message" value="Requesting data"/>
+            </log>
+            <send>
+                <endpoint key="User_Login"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Response Log" level="custom">
+                <property name="message" value="Sending response"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/user/signup">
+        <inSequence>
+            <log description="Requesting Log" level="custom">
+                <property name="message" value="Sending data"/>
+            </log>
+            <send>
+                <endpoint key="User_Signup"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Response Log" level="custom">
+                <property name="message" value="Getting response"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/paymentgateway/card">
+        <inSequence>
+            <log description="Requesting Log" level="custom">
+                <property name="message" value="Sending data"/>
+            </log>
+            <send>
+                <endpoint key="Card_Payment_Gateway"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Response Log" level="custom">
+                <property name="message" value="Getting response"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/paymentgateway/dialog">
+        <inSequence>
+            <log description="Requesting Log" level="custom">
+                <property name="message" value="Sending data"/>
+            </log>
+            <send>
+                <endpoint key="Dialog_Payment_Gateway"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Response Log" level="custom">
+                <property name="message" value="Getting response"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

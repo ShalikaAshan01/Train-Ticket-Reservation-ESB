@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="signin_endpoint" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/signin_endpoint.xml</file>
+    </artifact>
+    <artifact name="api" groupId="com.sa.ESB.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/api.xml</file>
+    </artifact>
+    <artifact name="signup_endpoint" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/signup_endpoint.xml</file>
+    </artifact>
+    <artifact name="updateprofile_endpoint" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/updateprofile_endpoint.xml</file>
+    </artifact>
+    <artifact name="updatePassword_endpoint" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/updatePassword_endpoint.xml</file>
+    </artifact>
+    <artifact name="validateUser" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/validateUser.xml</file>
+    </artifact>
+    <artifact name="addLine" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/addLine.xml</file>
+    </artifact>
+    <artifact name="showRoutes" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/showRoutes.xml</file>
+    </artifact>
+    <artifact name="showRoutesByLine" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/showRoutesByLine.xml</file>
+    </artifact>
+    <artifact name="addTrain" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/addTrain.xml</file>
+    </artifact>
+    <artifact name="getAllTrains" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/getAllTrains.xml</file>
+    </artifact>
+    <artifact name="checkAvailability" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/checkAvailability.xml</file>
+    </artifact>
+    <artifact name="addSchedule" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/addSchedule.xml</file>
+    </artifact>
+    <artifact name="getSpecificSchedule" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/getSpecificSchedule.xml</file>
+    </artifact>
+    <artifact name="makeReservation" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/makeReservation.xml</file>
+    </artifact>
+    <artifact name="GetReservationByUID" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetReservationByUID.xml</file>
+    </artifact>
+    <artifact name="getSpecificPricingInfo" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/getSpecificPricingInfo.xml</file>
+    </artifact>
+    <artifact name="sendEmail" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/sendEmail.xml</file>
+    </artifact>
+    <artifact name="sendsms" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/sendsms.xml</file>
+    </artifact>
+</artifacts>

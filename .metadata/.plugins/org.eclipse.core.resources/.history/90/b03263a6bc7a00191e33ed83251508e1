@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/api" name="api" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/users/signin">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/users/signup">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting data(Signup)"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PATCH" uri-template="/users/{id}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/users/{id}/changepassword">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/users/{id}/{token}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="validating user"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/line">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Adding line"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/line">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Line info"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/line/{line}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/trains">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/trains">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/trains/check/availability">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Checking train availability"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/schedules">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/schedules/{date}/{_tid}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/schedules/{tranID}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/schedules/{uid}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Data"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending data"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

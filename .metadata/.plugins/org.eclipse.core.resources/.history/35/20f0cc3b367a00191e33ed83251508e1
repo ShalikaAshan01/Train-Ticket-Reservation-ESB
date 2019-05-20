@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="signin_endpoint" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/signin_endpoint.xml</file>
+    </artifact>
+    <artifact name="api" groupId="com.sa.ESB.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/api.xml</file>
+    </artifact>
+    <artifact name="c" groupId="com.sa.ESB.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/c.xml</file>
+    </artifact>
+</artifacts>

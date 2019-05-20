@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="getSpecificPricingInfo" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="get" uri-template="http://localhost:3000/pricing/{var.uri.type}"/>
+</endpoint>

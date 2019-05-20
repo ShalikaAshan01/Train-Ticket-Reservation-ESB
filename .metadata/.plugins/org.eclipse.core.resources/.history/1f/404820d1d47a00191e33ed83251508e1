@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/api" name="api" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/users/signin">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting for signing in"/>
+            </log>
+            <send>
+                <endpoint key="signin_endpoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending user information"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/users/signup">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting to create account"/>
+            </log>
+            <send>
+                <endpoint key="signup_endpoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="Signning up"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PATCH" uri-template="/users/{id}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting user information"/>
+            </log>
+            <send>
+                <endpoint key="updateprofile_endpoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending user details"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/users/{id}/changepassword">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="requesting for change password"/>
+            </log>
+            <send>
+                <endpoint key="updatePassword_endpoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="changing password"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/users/{id}/{token}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="validating user"/>
+            </log>
+            <send>
+                <endpoint key="validateUser"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending validate details"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/line">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Adding line"/>
+            </log>
+            <send>
+                <endpoint key="addLine"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending line detail"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/line">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Lines info"/>
+            </log>
+            <send>
+                <endpoint key="showRoutes"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending lines details"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/line/{line}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting specific line detail"/>
+            </log>
+            <send>
+                <endpoint key="showRoutesByLine"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending line detail"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/trains">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Adding new Train"/>
+            </log>
+            <send>
+                <endpoint key="addTrain"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending added train detail"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/trains">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting train information"/>
+            </log>
+            <send>
+                <endpoint key="getAllTrains"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending train details"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/trains/check/availability">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Checking train availability"/>
+            </log>
+            <send>
+                <endpoint key="checkAvailability"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending availablity train information"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/schedules">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Adding new schedule"/>
+            </log>
+            <send>
+                <endpoint key="addSchedule"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending new schedule detail"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/schedules/{uid}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Specific Reservation"/>
+            </log>
+            <send>
+                <endpoint key="GetReservationByUID"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="sending Reservation Inforamtion"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/schedules/{date}/{tid}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting to get specific Reservation belong to train"/>
+            </log>
+            <send/>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="Send reservaton informaton"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/schedules/{tid}/{date}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Making Reservation"/>
+            </log>
+            <send>
+                <endpoint key="makeReservation"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="Send payment informaton"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/pricing/{type}">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting Price Information"/>
+            </log>
+            <send>
+                <endpoint key="getSpecificPricingInfo"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="Sending price"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/mail/send">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Sending email"/>
+            </log>
+            <send>
+                <endpoint key="sendEmail"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="Email was send"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/mail/send/sms">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="Requesting to send sms"/>
+            </log>
+            <send>
+                <endpoint key="sendsms"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log description="Respond Log" level="custom">
+                <property name="message" value="SMS was send"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>
